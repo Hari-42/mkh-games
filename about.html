@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../script.js" defer></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <title>About | MKH-GAMES</title>
+</head>
+
+<body class="bg-gray-100">
+<header class="sm:flex sm:justify-between py-3">
+    <div class="px-4 lg:px-8 mx-auto w-full max-w-4xl">
+        <div class="border-b relative flex h-16 items-center justify-between w-full">
+
+            <div class="flex items-center">
+                <a href="index.html">
+                    <h1 class="font-bold text-xl">MKH-GAMES</h1>
+                </a>
+            </div>
+
+            <div class="flex items-center">
+                <nav class="flex items-center hidden md:block">
+                    <a href="index.html" class="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">Home</a>
+                    <a href="games.html" class="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">Games</a>
+                    <a href="about.html" class="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">About</a>
+                    <a href="story.html" class="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">Story</a>
+                    <a href="blog.html" class="inline-flex items-center justify-center text-sm font-medium h-10 px-4 py-2">Blog</a>
+
+
+                </nav>
+
+
+                <button type="button" id="mobile-menu-button" aria-label="Open mobile menu" class="md:hidden inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         class="h-6 w-6">
+                        <line x1="4" x2="20" y1="12" y2="12" class="stroke-current"></line>
+                        <line x1="4" x2="20" y1="6" y2="6" class="stroke-current"></line>
+                        <line x1="4" x2="20" y1="18" y2="18" class="stroke-current"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-16 bg-white z-50 shadow-md">
+    <div class="flex justify-end p-4">
+        <button id="mobile-menu-close" class="text-gray-800 text-2xl">×</button>
+    </div>
+    <div class="flex justify-center">
+        <div class="space-y-2 px-4 py-2">
+            <a href="index.html" class="block py-2 text-lg font-semibold text-gray-800">Home</a>
+            <a href="games.html" class="block py-2 text-lg font-semibold text-gray-800">Games</a>
+            <a href="about.html" class="block py-2 text-lg font-semibold text-gray-800">About</a>
+            <a href="story.html" class="block py-2 text-lg font-semibold text-gray-800">Story</a>
+            <a href="blog.html" class="block py-2 text-lg font-semibold text-gray-800">Blog</a>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class='pt-12'></div>
+
+
+
+
+</main>
+
+<footer>
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+        <div class="md:flex md:justify-between">
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4 w-full">
+                <div class="mb-6 md:mb-0">
+                    <a class="flex items-center">
+                        <span class="self-center text-2xl font-bold whitespace-nowrap text-black">MKH-GAMES</span>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h2 class="mb-6 text-2xl font-bold text-black">Legal matters</h2>
+                    <ul class="text-gray-800 font-medium">
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h2 class="mb-6 text-2xl font-bold text-black">Resources</h2>
+                    <ul class="text-gray-800 font-medium">
+                        <li class="mb-4">
+                            <a href="https://tailwindcss.com/">Tailwind CSS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h2 class="mb-6 text-2xl font-bold text-black">Socials</h2>
+                    <ul class="text-gray-800 font-medium">
+                        <li class="mb-4">
+                            <a href='https://www.youtube.com/@harigamedev'>Youtube - Devlogs</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href='https://discord.gg/mjNcZFHnf5'>Discord - Community Server</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+        <div class="flex items-center justify-center flex-wrap">
+            <span class="text-sm text-black-500 text-center">© 2025 MKH-GAMES All Rights Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuCloseButton = document.getElementById("mobile-menu-close");
+
+    mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+    });
+
+    mobileMenuCloseButton.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+</script>
+
+</body>
+
+</html>
