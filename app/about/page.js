@@ -4,15 +4,12 @@ export const metadata = {
 
 export default function About() {
   return (
-    <>
-      <div className="pt-12"></div>
-
-      <h1 className="text-4xl font-bold text-black text-center">
-        Welcome to MKH-GAMES
+    <div className="mx-auto w-full max-w-3xl px-4 py-24 lg:px-8">
+      <h1 className="text-center text-4xl font-black tracking-tight text-white sm:text-5xl">
+        Welcome to <span className="gradient-text">MKH-GAMES</span>
       </h1>
 
-      <div className="pt-9"></div>
-      <p className="text-lg leading-relaxed mb-6 max-w-6xl mx-auto text-center block text-justify">
+      <p className="mt-10 text-lg leading-relaxed text-gray-300">
         Hi, I&apos;m Hari! I create games, and I make them for free because I love
         sharing my passion with everyone. Making games is my way of unleashing my
         creativity, letting ideas flow, and turning them into something people can
@@ -21,6 +18,6 @@ export default function About() {
         genuinely love. So, if you&apos;re curious, dive into my world of free games.
         There&apos;s always something exciting waiting for you!
       </p>
-    </>
+    </div>
   );
 }

@@ -63,27 +63,37 @@ const games = [
 
 export default function Games() {
   return (
-    <div className="pt-12 px-4 lg:px-8 mx-auto w-full max-w-7xl">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">My Games</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="mx-auto w-full max-w-6xl px-4 py-20 lg:px-8">
+      <div className="mb-14 text-center">
+        <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
+          My <span className="gradient-text">Games</span>
+        </h1>
+        <p className="mx-auto mt-4 max-w-lg text-gray-400">
+          Every title is free to play on itch.io. Pick one and dive in.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {games.map((game) => (
           <a
             key={game.title}
             href={game.href}
-            className="block transform transition-transform hover:scale-105"
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10"
           >
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="overflow-hidden">
               <Image
                 src={game.icon}
                 alt={game.title}
                 width={400}
                 height={192}
-                className="w-full h-48 object-cover"
+                className="h-48 w-full object-cover transition duration-500 group-hover:scale-110"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{game.title}</h3>
-                <p className="text-sm text-gray-600 mt-2">{game.description}</p>
-              </div>
+            </div>
+            <div className="p-5">
+              <h3 className="text-lg font-bold text-white">{game.title}</h3>
+              <p className="mt-2 text-sm text-gray-400">{game.description}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-transparent opacity-0 transition group-hover:opacity-100 [background-image:linear-gradient(120deg,var(--accent-from),var(--accent-to))] [-webkit-background-clip:text] [background-clip:text]">
+                Play on itch.io →
+              </span>
             </div>
           </a>
         ))}
