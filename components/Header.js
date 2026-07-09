@@ -43,7 +43,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium tracking-wide transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:bg-[var(--coral)] after:transition-all after:duration-300 ${
+                className={`relative font-pixel text-[0.62rem] uppercase transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:bg-[var(--coral)] after:transition-all after:duration-300 ${
                   active
                     ? "text-white after:w-full"
                     : "text-[var(--lav)] after:w-0 hover:text-white hover:after:w-full"
@@ -90,7 +90,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`rounded-lg px-3 py-3 text-sm font-medium tracking-wide transition ${
+                className={`rounded-lg px-3 py-3 font-pixel text-[0.62rem] uppercase transition ${
                   active
                     ? "bg-[var(--coral)]/15 text-white"
                     : "text-[var(--lav)] hover:bg-white/5 hover:text-white"
