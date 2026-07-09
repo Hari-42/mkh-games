@@ -16,7 +16,7 @@ export default function Home() {
     <div className="mx-auto w-full max-w-6xl px-4 lg:px-8">
       {/* Hero */}
       <section className="flex flex-col items-center py-24 text-center sm:py-32">
-        <p className="mb-8 font-pixel text-xs glow-teal">READY PLAYER ONE</p>
+        <p className="mb-8 font-pixel text-xs glow-teal">READY PLAYER 1</p>
         <h1 className="font-pixel text-3xl leading-tight text-white sm:text-5xl lg:text-6xl">
           MKH
           <span className="glow-coral">-GAMES</span>
