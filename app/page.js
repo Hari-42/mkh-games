@@ -15,17 +15,13 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 lg:px-8">
       {/* Hero */}
-      <section className="flex flex-col items-center py-20 text-center sm:py-28">
-        <p className="mb-8 font-pixel text-xs neon-cyan">★ PLAYER 1 READY ★</p>
+      <section className="flex flex-col items-center py-24 text-center sm:py-32">
+        <p className="mb-8 font-pixel text-xs glow-teal">READY PLAYER ONE</p>
         <h1 className="font-pixel text-3xl leading-tight text-white sm:text-5xl lg:text-6xl">
           MKH
-          <span className="neon-pink">-GAMES</span>
+          <span className="glow-coral">-GAMES</span>
         </h1>
-        <p className="mt-8 max-w-xl text-2xl text-purple-200">
-          A universe of games I build for fun and share with everyone —
-          <span className="neon-yellow"> completely free.</span>
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
           <Link href="/games" className="btn-retro">
             Press Start
           </Link>
@@ -33,7 +29,7 @@ export default function Home() {
             itch.io
           </a>
         </div>
-        <p className="mt-10 font-pixel text-[0.6rem] text-purple-300">
+        <p className="mt-12 font-pixel text-[0.6rem] text-[var(--lav)]">
           <span className="blink">▮</span> INSERT COIN
         </p>
       </section>
@@ -52,7 +48,7 @@ export default function Home() {
               height={500}
               className="h-[420px] w-full object-cover transition duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0d021f] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#16132e] via-transparent to-transparent" />
             <span className="absolute bottom-4 left-5 font-pixel text-sm text-white">
               {item.alt}
             </span>
