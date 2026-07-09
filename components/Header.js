@@ -17,7 +17,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-[var(--coral)] bg-[#16132e]/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b-2 border-[var(--coral)] bg-[#000000]/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -60,7 +60,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`${menuOpen ? "block" : "hidden"} border-t-2 border-[var(--teal)] bg-[#16132e]/95 md:hidden`}
+        className={`${menuOpen ? "block" : "hidden"} border-t-2 border-[var(--teal)] bg-[#000000]/95 md:hidden`}
       >
         <nav className="mx-auto flex w-full max-w-5xl flex-col gap-1 px-4 py-4">
           {links.map((link) => {

@@ -48,7 +48,7 @@ export default function Home() {
               height={500}
               className="h-[420px] w-full object-cover transition duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#16132e] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent" />
             <span className="absolute bottom-4 left-5 font-pixel text-sm text-white">
               {item.alt}
             </span>
