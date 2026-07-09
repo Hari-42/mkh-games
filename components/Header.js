@@ -17,7 +17,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b-4 border-[var(--neon-pink)] bg-[#0d021f]/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b-2 border-[var(--coral)] bg-[#16132e]/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -29,7 +29,7 @@ export default function Header() {
             priority
           />
           <span className="hidden font-pixel text-sm text-white sm:block">
-            MKH<span className="neon-pink">-GAMES</span>
+            MKH<span className="glow-coral">-GAMES</span>
           </span>
         </Link>
 
@@ -52,7 +52,7 @@ export default function Header() {
           type="button"
           aria-label="Open mobile menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="border-2 border-[var(--neon-cyan)] px-2 py-1 font-pixel text-xs text-[var(--neon-cyan)] md:hidden"
+          className="border-2 border-[var(--teal)] px-2 py-1 font-pixel text-xs text-[var(--teal)] md:hidden"
         >
           {menuOpen ? "X" : "="}
         </button>
@@ -60,7 +60,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`${menuOpen ? "block" : "hidden"} border-t-4 border-[var(--neon-cyan)] bg-[#0d021f]/95 md:hidden`}
+        className={`${menuOpen ? "block" : "hidden"} border-t-2 border-[var(--teal)] bg-[#16132e]/95 md:hidden`}
       >
         <nav className="mx-auto flex w-full max-w-5xl flex-col gap-1 px-4 py-4">
           {links.map((link) => {
