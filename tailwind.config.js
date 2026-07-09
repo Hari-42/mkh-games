@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        pixel: ["var(--font-pixel)", "monospace"],
+        terminal: ["var(--font-terminal)", "monospace"],
       },
     },
   },

@@ -17,30 +17,30 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#07070c]/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b-4 border-[var(--neon-pink)] bg-[#0d021f]/90 backdrop-blur-sm">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/gameicons/MKH-LOGO.png"
             alt="MKH-LOGO"
-            width={44}
-            height={44}
-            className="h-11 w-auto object-contain"
+            width={40}
+            height={40}
+            className="h-10 w-auto object-contain [image-rendering:pixelated]"
             priority
           />
-          <span className="hidden text-lg font-bold tracking-tight text-white sm:block">
-            MKH<span className="gradient-text">-GAMES</span>
+          <span className="hidden font-pixel text-sm text-white sm:block">
+            MKH<span className="neon-pink">-GAMES</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`nav-link text-sm font-medium ${active ? "current" : ""}`}
+                className={`nav-link ${active ? "current" : ""}`}
               >
                 {link.label}
               </Link>
@@ -52,36 +52,17 @@ export default function Header() {
           type="button"
           aria-label="Open mobile menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-gray-200 transition hover:bg-white/10 md:hidden"
+          className="border-2 border-[var(--neon-cyan)] px-2 py-1 font-pixel text-xs text-[var(--neon-cyan)] md:hidden"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            className="h-6 w-6"
-          >
-            {menuOpen ? (
-              <>
-                <line x1="6" x2="18" y1="6" y2="18" className="stroke-current" strokeWidth="2" />
-                <line x1="6" x2="18" y1="18" y2="6" className="stroke-current" strokeWidth="2" />
-              </>
-            ) : (
-              <>
-                <line x1="4" x2="20" y1="12" y2="12" className="stroke-current" strokeWidth="2" />
-                <line x1="4" x2="20" y1="6" y2="6" className="stroke-current" strokeWidth="2" />
-                <line x1="4" x2="20" y1="18" y2="18" className="stroke-current" strokeWidth="2" />
-              </>
-            )}
-          </svg>
+          {menuOpen ? "X" : "="}
         </button>
       </div>
 
       {/* Mobile menu */}
       <div
-        className={`${menuOpen ? "block" : "hidden"} border-t border-white/10 bg-[#07070c]/95 backdrop-blur-xl md:hidden`}
+        className={`${menuOpen ? "block" : "hidden"} border-t-4 border-[var(--neon-cyan)] bg-[#0d021f]/95 md:hidden`}
       >
-        <nav className="mx-auto flex w-full max-w-5xl flex-col px-4 py-3">
+        <nav className="mx-auto flex w-full max-w-5xl flex-col gap-1 px-4 py-4">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
@@ -89,12 +70,9 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`rounded-lg px-3 py-3 text-base font-medium transition ${
-                  active
-                    ? "bg-white/10 text-white"
-                    : "text-gray-300 hover:bg-white/5 hover:text-white"
-                }`}
+                className={`nav-link px-2 py-3 ${active ? "current" : ""}`}
               >
+                {"> "}
                 {link.label}
               </Link>
             );

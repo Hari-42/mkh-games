@@ -64,35 +64,37 @@ const games = [
 export default function Games() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-20 lg:px-8">
-      <div className="mb-14 text-center">
-        <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
-          My <span className="gradient-text">Games</span>
+      <div className="mb-16 text-center">
+        <p className="mb-4 font-pixel text-xs neon-cyan">SELECT YOUR GAME</p>
+        <h1 className="font-pixel text-3xl text-white sm:text-4xl">
+          MY <span className="neon-pink">GAMES</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-lg text-gray-400">
-          Every title is free to play on itch.io. Pick one and dive in.
-        </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {games.map((game) => (
           <a
             key={game.title}
             href={game.href}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10"
+            className="pixel-box group relative block overflow-hidden bg-[#160636] transition-transform duration-150 hover:-translate-y-1 hover:translate-x-[-1px]"
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden border-b-2 border-[var(--neon-pink)]">
               <Image
                 src={game.icon}
                 alt={game.title}
                 width={400}
                 height={192}
-                className="h-48 w-full object-cover transition duration-500 group-hover:scale-110"
+                className="h-44 w-full object-cover [image-rendering:pixelated] transition duration-500 group-hover:scale-110"
               />
             </div>
             <div className="p-5">
-              <h3 className="text-lg font-bold text-white">{game.title}</h3>
-              <p className="mt-2 text-sm text-gray-400">{game.description}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-transparent opacity-0 transition group-hover:opacity-100 [background-image:linear-gradient(120deg,var(--accent-from),var(--accent-to))] [-webkit-background-clip:text] [background-clip:text]">
-                Play on itch.io →
+              <h3 className="font-pixel text-[0.7rem] leading-relaxed text-[var(--neon-yellow)]">
+                {game.title}
+              </h3>
+              <p className="mt-3 text-lg leading-tight text-purple-200">
+                {game.description}
+              </p>
+              <span className="mt-3 block font-pixel text-[0.6rem] text-[var(--neon-cyan)] opacity-0 transition group-hover:opacity-100">
+                &gt; PLAY
               </span>
             </div>
           </a>

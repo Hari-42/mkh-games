@@ -5,19 +5,24 @@ export const metadata = {
 export default function About() {
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-24 lg:px-8">
-      <h1 className="text-center text-4xl font-black tracking-tight text-white sm:text-5xl">
-        Welcome to <span className="gradient-text">MKH-GAMES</span>
-      </h1>
+      <div className="mb-10 text-center">
+        <p className="mb-4 font-pixel text-xs neon-cyan">ABOUT THE DEV</p>
+        <h1 className="font-pixel text-2xl leading-relaxed text-white sm:text-3xl">
+          WELCOME TO <span className="neon-pink">MKH-GAMES</span>
+        </h1>
+      </div>
 
-      <p className="mt-10 text-lg leading-relaxed text-gray-300">
-        Hi, I&apos;m Hari! I create games, and I make them for free because I love
-        sharing my passion with everyone. Making games is my way of unleashing my
-        creativity, letting ideas flow, and turning them into something people can
-        enjoy. Each game is a unique journey where I experiment, innovate, and just
-        have fun. It&apos;s about bringing joy to others while doing something I
-        genuinely love. So, if you&apos;re curious, dive into my world of free games.
-        There&apos;s always something exciting waiting for you!
-      </p>
+      <div className="pixel-box bg-[#160636] p-8">
+        <p className="text-2xl leading-snug text-purple-100">
+          Hi, I&apos;m <span className="neon-yellow">Hari!</span> I create games, and I
+          make them for free because I love sharing my passion with everyone. Making
+          games is my way of unleashing my creativity, letting ideas flow, and turning
+          them into something people can enjoy. Each game is a unique journey where I
+          experiment, innovate, and just have fun. It&apos;s about bringing joy to others
+          while doing something I genuinely love. So, if you&apos;re curious, dive into my
+          world of free games. There&apos;s always something exciting waiting for you!
+        </p>
+      </div>
     </div>
   );
 }
