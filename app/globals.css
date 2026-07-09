@@ -77,10 +77,10 @@ body {
 .btn-retro {
   display: inline-block;
   font-family: var(--font-pixel), monospace;
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  padding: 0.95rem 1.5rem;
+  padding: 1.15rem 1.9rem;
   border: none;
   background: var(--coral);
   color: #000000;
@@ -125,5 +125,5 @@ body {
 /* Static wireframe globe (behind hero title) */
 .globe {
   color: var(--coral);
-  opacity: 0.35;
+  opacity: 0.45;
 }

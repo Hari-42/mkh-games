@@ -16,26 +16,28 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 lg:px-8">
       {/* Hero */}
-      <section className="relative flex flex-col items-center py-24 text-center sm:py-32">
-        {/* Static globe backdrop */}
-        <Globe className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 sm:h-[440px] sm:w-[440px]" />
+      <section className="relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-12 text-center">
+        {/* Large globe, centered behind the content */}
+        <Globe className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[min(88vh,95vw)] w-[min(88vh,95vw)] -translate-x-1/2 -translate-y-1/2" />
 
-        <p className="mb-8 font-pixel text-xs glow-teal">READY PLAYER 1</p>
-        <h1 className="font-pixel text-3xl leading-tight text-white sm:text-5xl lg:text-6xl [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
-          MKH
-          <span className="glow-coral">-GAMES</span>
-        </h1>
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
-          <Link href="/games" className="btn-retro">
-            Press Start
-          </Link>
-          <a href="https://harigamesdev.itch.io/" className="btn-retro alt">
-            itch.io
-          </a>
+        <div className="relative z-10 flex flex-col items-center">
+          <p className="mb-8 font-pixel text-base glow-teal sm:text-xl">READY PLAYER 1</p>
+          <h1 className="font-pixel text-5xl leading-tight text-white sm:text-7xl lg:text-8xl [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
+            MKH
+            <span className="glow-coral">-GAMES</span>
+          </h1>
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-8">
+            <Link href="/games" className="btn-retro">
+              Press Start
+            </Link>
+            <a href="https://harigamesdev.itch.io/" className="btn-retro alt">
+              itch.io
+            </a>
+          </div>
+          <p className="mt-16 font-pixel text-xs text-[var(--lav)] sm:text-sm">
+            <span className="blink">▮</span> INSERT COIN
+          </p>
         </div>
-        <p className="mt-12 font-pixel text-[0.6rem] text-[var(--lav)]">
-          <span className="blink">▮</span> INSERT COIN
-        </p>
       </section>
 
       {/* Featured gallery */}
