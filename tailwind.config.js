@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         pixel: ["var(--font-pixel)", "monospace"],
-        terminal: ["var(--font-terminal)", "monospace"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
     },
   },
