@@ -6,15 +6,15 @@ export default function About() {
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-24 lg:px-8">
       <div className="mb-10 text-center">
-        <p className="mb-4 font-pixel text-xs neon-cyan">ABOUT THE DEV</p>
+        <p className="mb-4 font-pixel text-xs glow-teal">ABOUT THE DEV</p>
         <h1 className="font-pixel text-2xl leading-relaxed text-white sm:text-3xl">
-          WELCOME TO <span className="neon-pink">MKH-GAMES</span>
+          WELCOME TO <span className="glow-coral">MKH-GAMES</span>
         </h1>
       </div>
 
-      <div className="pixel-box bg-[#160636] p-8">
-        <p className="text-2xl leading-snug text-purple-100">
-          Hi, I&apos;m <span className="neon-yellow">Hari!</span> I create games, and I
+      <div className="pixel-box bg-[var(--bg-soft)] p-8">
+        <p className="text-lg leading-relaxed text-[var(--lav)]">
+          Hi, I&apos;m <span className="glow-amber">Hari!</span> I create games, and I
           make them for free because I love sharing my passion with everyone. Making
           games is my way of unleashing my creativity, letting ideas flow, and turning
           them into something people can enjoy. Each game is a unique journey where I

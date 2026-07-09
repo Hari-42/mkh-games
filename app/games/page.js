@@ -65,9 +65,9 @@ export default function Games() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-20 lg:px-8">
       <div className="mb-16 text-center">
-        <p className="mb-4 font-pixel text-xs neon-cyan">SELECT YOUR GAME</p>
+        <p className="mb-4 font-pixel text-xs glow-teal">SELECT YOUR GAME</p>
         <h1 className="font-pixel text-3xl text-white sm:text-4xl">
-          MY <span className="neon-pink">GAMES</span>
+          MY <span className="glow-coral">GAMES</span>
         </h1>
       </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -75,9 +75,9 @@ export default function Games() {
           <a
             key={game.title}
             href={game.href}
-            className="pixel-box group relative block overflow-hidden bg-[#160636] transition-transform duration-150 hover:-translate-y-1 hover:translate-x-[-1px]"
+            className="pixel-box group relative block overflow-hidden bg-[var(--bg-soft)] transition-transform duration-150 hover:-translate-y-1 hover:translate-x-[-1px]"
           >
-            <div className="overflow-hidden border-b-2 border-[var(--neon-pink)]">
+            <div className="overflow-hidden border-b-2 border-[var(--coral)]">
               <Image
                 src={game.icon}
                 alt={game.title}
@@ -87,13 +87,13 @@ export default function Games() {
               />
             </div>
             <div className="p-5">
-              <h3 className="font-pixel text-[0.7rem] leading-relaxed text-[var(--neon-yellow)]">
+              <h3 className="font-pixel text-[0.7rem] leading-relaxed glow-amber">
                 {game.title}
               </h3>
-              <p className="mt-3 text-lg leading-tight text-purple-200">
+              <p className="mt-3 text-base leading-snug text-[var(--lav)]">
                 {game.description}
               </p>
-              <span className="mt-3 block font-pixel text-[0.6rem] text-[var(--neon-cyan)] opacity-0 transition group-hover:opacity-100">
+              <span className="mt-3 block font-pixel text-[0.6rem] text-[var(--teal)] opacity-0 transition group-hover:opacity-100">
                 &gt; PLAY
               </span>
             </div>
