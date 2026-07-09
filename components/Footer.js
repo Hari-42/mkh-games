@@ -44,11 +44,10 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+          <div className="mt-12 border-t border-white/10 pt-6 text-center">
             <span className="text-xs text-[var(--lav)]">
-              © 2025 MKH-GAMES. All rights reserved.
+              © 2026 MKH-GAMES. All rights reserved.
             </span>
-            <span className="text-xs text-white/40">Made with Next.js</span>
           </div>
         </div>
       </div>
