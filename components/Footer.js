@@ -6,12 +6,12 @@ export default function Footer() {
       {/* thin gradient accent line */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-[var(--coral)]/60 to-transparent" />
 
-      <div className="bg-black/50 backdrop-blur-sm">
+      <div className="bg-[var(--surface)] backdrop-blur-sm">
         <div className="mx-auto w-full max-w-6xl px-4 py-14 lg:px-8">
           <div className="flex flex-col gap-12 md:flex-row md:justify-between">
             {/* Brand */}
             <div className="max-w-xs">
-              <span className="font-pixel text-sm text-white">
+              <span className="font-pixel text-sm text-[var(--text)]">
                 MKH<span className="text-[var(--coral)]">-GAMES</span>
               </span>
               <p className="mt-4 text-sm leading-relaxed text-[var(--lav)]">
@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 border-t border-white/10 pt-6 text-center">
+          <div className="mt-12 border-t border-[var(--border)] pt-6 text-center">
             <span className="text-xs text-[var(--lav)]">
               © 2026 MKH-GAMES. All rights reserved.
             </span>
@@ -58,7 +58,7 @@ export default function Footer() {
 function FooterCol({ title, children }) {
   return (
     <div>
-      <h2 className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/50">
+      <h2 className="mb-4 text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
         {title}
       </h2>
       <ul className="space-y-3 text-sm text-[var(--lav)]">{children}</ul>

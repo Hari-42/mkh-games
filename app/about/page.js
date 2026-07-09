@@ -7,7 +7,7 @@ export default function About() {
     <div className="mx-auto w-full max-w-3xl px-4 py-24 lg:px-8">
       <div className="mb-10 text-center">
         <p className="mb-4 font-pixel text-xs glow-teal">ABOUT THE DEV</p>
-        <h1 className="font-pixel text-2xl leading-relaxed text-white sm:text-3xl">
+        <h1 className="font-pixel text-2xl leading-relaxed text-[var(--text)] sm:text-3xl">
           WELCOME TO <span className="glow-coral">MKH-GAMES</span>
         </h1>
       </div>

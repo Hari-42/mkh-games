@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark theme (default) */
 :root {
   --bg: #000000;
   --bg-soft: #0a0e14;
@@ -9,7 +10,36 @@
   --teal: #7dd3fc;
   --amber: #bae6fd;
   --lav: #9fb6d6;
+  --text: #eaeefb;
+  --muted: #7c89a6;
+  --surface: rgba(0, 0, 0, 0.6);
+  --surface-strong: rgba(0, 0, 0, 0.9);
+  --border: rgba(255, 255, 255, 0.1);
+  --hover: rgba(255, 255, 255, 0.1);
   --grid: rgba(56, 189, 248, 0.08);
+  --glow-top: rgba(56, 189, 248, 0.16);
+  --glow-bottom: rgba(56, 189, 248, 0.12);
+  --scanline: rgba(0, 0, 0, 0.06);
+}
+
+/* Light theme */
+html.light {
+  --bg: #eef2f9;
+  --bg-soft: #ffffff;
+  --coral: #0284c7;
+  --teal: #0ea5e9;
+  --amber: #0369a1;
+  --lav: #475569;
+  --text: #0f172a;
+  --muted: #64748b;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --border: rgba(15, 23, 42, 0.1);
+  --hover: rgba(15, 23, 42, 0.06);
+  --grid: rgba(2, 132, 199, 0.1);
+  --glow-top: rgba(14, 165, 233, 0.18);
+  --glow-bottom: rgba(14, 165, 233, 0.12);
+  --scanline: transparent;
 }
 
 html {
@@ -18,12 +48,12 @@ html {
 
 body {
   position: relative;
-  color: #eaeefb;
+  color: var(--text);
   min-height: 100vh;
   background-color: var(--bg);
   background-image:
-    radial-gradient(900px 480px at 50% -12%, rgba(56, 189, 248, 0.16), transparent 60%),
-    radial-gradient(900px 520px at 50% 112%, rgba(56, 189, 248, 0.12), transparent 60%),
+    radial-gradient(900px 480px at 50% -12%, var(--glow-top), transparent 60%),
+    radial-gradient(900px 520px at 50% 112%, var(--glow-bottom), transparent 60%),
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size:
@@ -44,7 +74,7 @@ body {
     to bottom,
     rgba(0, 0, 0, 0) 0px,
     rgba(0, 0, 0, 0) 3px,
-    rgba(0, 0, 0, 0.06) 4px
+    var(--scanline) 4px
   );
 }
 

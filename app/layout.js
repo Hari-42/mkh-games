@@ -26,6 +26,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${pixel.variable} ${sans.variable}`}>
       <body className="scanlines flex min-h-screen flex-col font-sans antialiased">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}if(t==='light'){document.documentElement.classList.add('light');}}catch(e){}})();`,
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

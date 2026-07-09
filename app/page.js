@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center">
           <p className="mb-8 font-pixel text-base glow-teal sm:text-xl">READY PLAYER 1</p>
-          <h1 className="font-pixel text-5xl leading-tight text-white sm:text-7xl lg:text-8xl [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
+          <h1 className="font-pixel text-5xl leading-tight text-[var(--text)] sm:text-7xl lg:text-8xl [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
             MKH
             <span className="glow-coral">-GAMES</span>
           </h1>

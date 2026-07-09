@@ -66,7 +66,7 @@ export default function Games() {
     <div className="mx-auto w-full max-w-6xl px-4 py-20 lg:px-8">
       <div className="mb-16 text-center">
         <p className="mb-4 font-pixel text-xs glow-teal">SELECT YOUR GAME</p>
-        <h1 className="font-pixel text-3xl text-white sm:text-4xl">
+        <h1 className="font-pixel text-3xl text-[var(--text)] sm:text-4xl">
           MY <span className="glow-coral">GAMES</span>
         </h1>
       </div>
