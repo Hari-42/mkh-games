@@ -17,7 +17,7 @@ export default function Home() {
     <div className="mx-auto w-full max-w-6xl px-4 lg:px-8">
       {/* Hero */}
       <section className="relative flex flex-col items-center py-24 text-center sm:py-32">
-        {/* Rotating globe backdrop */}
+        {/* Static globe backdrop */}
         <Globe className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 sm:h-[440px] sm:w-[440px]" />
 
         <p className="mb-8 font-pixel text-xs glow-teal">READY PLAYER 1</p>

@@ -122,21 +122,8 @@ body {
   animation: blink 1s steps(1) infinite;
 }
 
-/* Rotating wireframe globe (behind hero title) */
+/* Static wireframe globe (behind hero title) */
 .globe {
   color: var(--coral);
   opacity: 0.35;
-}
-.globe .meridian {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  animation: globe-rotate 9s linear infinite;
-}
-@keyframes globe-rotate {
-  0% { transform: scaleX(1); }
-  50% { transform: scaleX(0.04); }
-  100% { transform: scaleX(1); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .globe .meridian { animation: none; }
 }
