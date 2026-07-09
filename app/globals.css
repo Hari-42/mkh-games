@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 nav {
     display: flex;
     gap: 20px;
@@ -22,7 +26,6 @@ nav a::after {
     transition: all 0.3s ease-in-out;
 }
 
-
 nav a:hover::after {
     width: 100%;
     left: 0;
@@ -33,15 +36,12 @@ nav a:not(:hover)::after {
     left: 0;
 }
 
-
 nav a.current::after {
     width: 100%;
     left: 0;
 }
 
-
 nav a:active::after {
     width: 100%;
     left: 0;
 }
-
