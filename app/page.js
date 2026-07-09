@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Globe from "@/components/Globe";
 
 export const metadata = {
   title: "Home | MKH-GAMES",
@@ -15,9 +16,12 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 lg:px-8">
       {/* Hero */}
-      <section className="flex flex-col items-center py-24 text-center sm:py-32">
+      <section className="relative flex flex-col items-center py-24 text-center sm:py-32">
+        {/* Rotating globe backdrop */}
+        <Globe className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 sm:h-[440px] sm:w-[440px]" />
+
         <p className="mb-8 font-pixel text-xs glow-teal">READY PLAYER 1</p>
-        <h1 className="font-pixel text-3xl leading-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="font-pixel text-3xl leading-tight text-white sm:text-5xl lg:text-6xl [text-shadow:0_2px_18px_rgba(0,0,0,0.9)]">
           MKH
           <span className="glow-coral">-GAMES</span>
         </h1>
