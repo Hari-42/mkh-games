@@ -5,7 +5,14 @@ export const metadata = {
 export default function Story() {
   return (
     <div className="mx-auto flex min-h-[60vh] w-full max-w-3xl flex-col items-center justify-center px-4 text-center lg:px-8">
-      <p className="mb-6 font-pixel text-xs glow-teal blink">● LOADING...</p>
+      <p className="mb-6 font-pixel text-xs glow-teal">
+        LOADING
+        <span className="loading-dots">
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
+        </span>
+      </p>
       <h1 className="font-pixel text-2xl leading-relaxed text-[var(--text)] sm:text-3xl">
         THE <span className="glow-coral">MKH-UNIVERSE</span> STORY
       </h1>
