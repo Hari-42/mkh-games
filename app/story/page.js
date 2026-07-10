@@ -6,7 +6,7 @@ export default function Story() {
   return (
     <div className="mx-auto flex min-h-[60vh] w-full max-w-3xl flex-col items-center justify-center px-4 text-center lg:px-8">
       <p className="mb-6 font-pixel text-xs glow-teal">
-        ● LOADING
+        <span className="blink">●</span> LOADING
         <span className="loading-dots">
           <span>.</span>
           <span>.</span>
